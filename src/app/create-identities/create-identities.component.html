@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="formData">
+    <div class="card">
+      <div class="card-header"><b>Create Admin Identities</b></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <label for="mspadm"><b>MSP :</b></label>
+            <input type="text" class="form-control" id="mspadm" placeholder="Org1MSP" formControlName="mspNameadm"
+              class="form-control" required>
+          </div>
+          <div class="col">
+            <label for="nameadm"><b>Admin Name :</b></label>
+            <input type="text" class="form-control" id="nameadm" placeholder="admin" formControlName="admName"
+              class="form-control" required>
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success mx-auto d-block" (click)="onClickRegisterAdmin()" >Generate</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><b>Create User Identities</b></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <label for="mspusr"><b>MSP :</b></label>
+            <input type="text" class="form-control" id="mspusr" placeholder="Org1MSP" formControlName="mspNameusr"
+              class="form-control" required>
+          </div>
+          <div class="col">
+            <label for="nameusr"><b>User Name :</b></label>
+            <input type="text" class="form-control" id="nameusr" placeholder="user1" formControlName="idName"
+              class="form-control" required>
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success mx-auto d-block" (click)="onClickRegisterUser()" >Generate</button>
+      </div>
+    </div>
+  </form>
+</div>

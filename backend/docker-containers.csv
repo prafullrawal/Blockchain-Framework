@@ -1,0 +1,6 @@
+CONTAINER_ID,NAMES,IMAGE,STATUS,PORTS
+fcfc58a479e3,peer0.org1.example.com,hyperledger/fabric-peer,Up 16 seconds,0.0.0.0:7051->7051/tcp 0.0.0.0:7053->7053/tcp
+29e224827975,cli,hyperledger/fabric-tools,Up 17 seconds,
+ca2f3e73fb60,couchdb,hyperledger/fabric-couchdb,Up 17 seconds,4369/tcp 9100/tcp 0.0.0.0:5984->5984/tcp
+157370e7fdf4,ca.example.com,hyperledger/fabric-ca,Up 16 seconds,0.0.0.0:7054->7054/tcp
+7da104c64da6,orderer.example.com,hyperledger/fabric-orderer,Up 17 seconds,0.0.0.0:7050->7050/tcp

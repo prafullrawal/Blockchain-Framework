@@ -1,0 +1,14 @@
+<div class="container">
+  <br>
+  <img src="../../assets/images/pre-requisite.PNG" class="mx-auto d-block">
+  <br>
+  <button type="button" class="btn btn-success mx-auto d-block" (click)="installPrerequisite()">Install</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="card-header" *ngIf="isShown">
+  {{message}}
+</div>
+

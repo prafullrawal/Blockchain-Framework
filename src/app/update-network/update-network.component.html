@@ -1,0 +1,94 @@
+<div class="container">
+  <form [formGroup]="updateFormData">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-header"><b>Orderer Details</b></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <label for="odrname"><b>Name :</b></label>
+                <input type="text" class="form-control" id="odrname" placeholder="Orderer" formControlName="ordererName" >
+              </div>
+              <div class="col">
+                <label for="domain"><b>Domain :</b></label>
+                <input type="text" class="form-control" id="domain" placeholder="example.com" formControlName="domainName" >
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-header"><b>Host Details</b></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <label for="host"><b>Host :</b></label>
+                <input type="text" class="form-control" id="host" placeholder="orderer" formControlName="hostName">
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-header"><b>Organization Details</b><button style="float: right;">
+          <fa-icon [icon]="faPlus"></fa-icon>
+        </button></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <label for="orgname"><b>Org Name :</b></label>
+            <input type="text" class="form-control" id="orgname" placeholder="org1" formControlName="orgName">
+          </div>
+          <div class="col">
+            <label for="msp"><b>Org MSP :</b></label>
+            <input type="text" class="form-control" id="msp" placeholder="org1MSP" formControlName="orgMsp">
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="card">
+          <div class="card-header"><b>Peer Details</b><button style="float: right;">
+              <fa-icon [icon]="faPlus"></fa-icon>
+            </button></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <label for="peername"><b>Peer Count :</b></label>
+                <input type="text" class="form-control" id="peername" placeholder="1" formControlName="peercount">
+              </div>
+              <div class="col">
+                <label for="peerport"><b>User Count :</b></label>
+                <input type="text" class="form-control" id="peerport" placeholder="1" formControlName="userscount">
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><b>Channel Details</b><button style="float: right;">
+              <fa-icon [icon]="faPlus"></fa-icon>
+            </button></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <label for="chname"><b>Channel Name :</b></label>
+                <input type="text" class="form-control" id="chname" placeholder="mychannel" formControlName="channelName">
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-success mx-auto d-block" (click)="onClickModify()" >Update</button>
+    <br>
+  </form>
+</div>

@@ -1,0 +1,75 @@
+<div class="container">
+  <br>
+  <div class="card">
+    <div class="card-header"><b>Upload Chaincode Files</b></div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="custom-file">
+            <input type="file" ng2FileSelect [uploader]="uploader" class="custom-file-input" id="customFile"
+              name="filename" multiple/>
+            <label class="custom-file-label" for="customFile"><b>Choose file</b></label>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-success mx-auto d-block" (click)="uploader.uploadAll()">Upload</button>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <tbody>
+                <tr *ngFor="let item of uploader.queue">
+                  <td style="background-color: darkgray;">
+                    <div class="rounded">
+                      <strong>{{ item?.file?.name }}</strong>
+                      <button type="button" class="btn btn-danger" (click)="item.remove()"
+                        style="float: right; border-radius: 50px;">Remove</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header"><b>Install, Instantiate, Query & Upgrade Chaincode</b></div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-success mx-auto d-block" (click)="installChaincode()">Install</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-success mx-auto d-block">Instantiate</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-success mx-auto d-block">Query/Invoke</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-success mx-auto d-block" (click)="upgradeChaincode()">Upgrade</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header"><b>Generate File For Swagger</b></div>
+    <div class="card-body">
+      <button type="button" class="btn btn-success mx-auto d-block" (click)="generateSwaggerFile()">Generate
+        JSON</button>
+    </div>
+  </div>
+  <br>
+</div>
