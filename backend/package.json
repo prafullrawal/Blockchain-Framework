@@ -12,7 +12,7 @@
     "child_process": "^1.0.2",
     "circular-json": "^0.5.9",
     "csvtojson": "^2.0.10",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "fabric-ca-client": "^1.4.5",
     "fabric-client": "^1.4.5",
     "fs": "0.0.1-security",
